@@ -33,7 +33,7 @@ spec:
     spec:
       containers:
         - name: nautible-app-payment-bff
-          image: public.ecr.aws/nautible/nautible-app-payment-bff:b4884ba4080adaf96a165516352573396b936d5e
+          image: public.ecr.aws/nautible/nautible-app-payment-bff:c598119ec55ddc5ba95f1a0dbed7881fde473bf3
           ports:
             - containerPort: 8080
             - containerPort: 9000
