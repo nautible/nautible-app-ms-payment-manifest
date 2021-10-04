@@ -33,7 +33,7 @@ spec:
     spec:
       containers:
         - name: nautible-app-payment-cash
-          image: public.ecr.aws/nautible/nautible-app-payment-cash:f6b71af058e9fdf99c19fba7559107b01207d900
+          image: public.ecr.aws/nautible/nautible-app-payment-cash:fb92b3fbea2695bdc04e39cca81da4086a3e21b5
           ports:
             - containerPort: 8080
             - containerPort: 9000
