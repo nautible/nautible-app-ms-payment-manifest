@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nautible-app-payment-cash
+  namespace: nautible-app
+spec:
+  template:
+    spec:
+      containers:
+        - name: nautible-app-payment-cash
+          env:
+            - name: QUARKUS_DYNAMODB_AWS_REGION
+              value: ap-northeast-1

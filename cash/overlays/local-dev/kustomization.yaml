@@ -1,0 +1,6 @@
+bases:
+  - ../../base
+patchesStrategicMerge:
+  - payment-cash-deploy.yaml
+resources:
+  - payment-localstack.yaml
