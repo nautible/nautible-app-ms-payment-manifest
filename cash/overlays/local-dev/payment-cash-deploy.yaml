@@ -9,17 +9,8 @@ spec:
   template:
     spec:
       containers:
-        - name: nautible-app-payment-cash
-          env:
-          - name: QUARKUS_PROFILE
-            value: local-dev
-          #- name: JAVA_VERSION
-          #  value: "11"
-          # daprのsidecarの初期化時に必要なlocalstack(sns,sqs)が利用できるまでwait
-          lifecycle:
-            postStart:
-              exec:
-                command:
-                  - sh
-                  - -c
-                  - "for i in `seq 1 60`; do curl http://payment-localstack:4566/health >/dev/null && break || true; sleep 5; done"
+      - name: nautible-app-payment-cash
+        image: nautible-app-payment-cash
+        env:
+        - name: QUARKUS_PROFILE
+          value: local-dev
