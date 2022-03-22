@@ -1,13 +1,13 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nautible-app-payment-credit
-  namespace: nautible-app
+  name: nautible-app-ms-payment-credit
+  namespace: nautible-app-ms
 spec:
   template:
     spec:
       containers:
-        - name: nautible-app-payment-credit
+        - name: nautible-app-ms-payment-credit
           env:
             - name: QUARKUS_DYNAMODB_AWS_REGION
               value: ap-northeast-1

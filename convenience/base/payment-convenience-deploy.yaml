@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nautible-app-payment-convenience
-  namespace: nautible-app
+  name: nautible-app-ms-payment-convenience
+  namespace: nautible-app-ms
   labels:
-    app.kubernetes.io/name: nautible-app-payment-convenience
-    app.kubernetes.io/instance: nautible-app-payment-convenience
+    app.kubernetes.io/name: nautible-app-ms-payment-convenience
+    app.kubernetes.io/instance: nautible-app-ms-payment-convenience
     app.kubernetes.io/version: 1.0.0
     app.kubernetes.io/component: app
     app.kubernetes.io/part-of: nautible
@@ -14,26 +14,26 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app.kubernetes.io/instance: nautible-app-payment-convenience
+      app.kubernetes.io/instance: nautible-app-ms-payment-convenience
       app.kubernetes.io/component: app
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: nautible-app-payment-convenience
-        app.kubernetes.io/instance: nautible-app-payment-convenience
+        app.kubernetes.io/name: nautible-app-ms-payment-convenience
+        app.kubernetes.io/instance: nautible-app-ms-payment-convenience
         app.kubernetes.io/version: 1.0.0
         app.kubernetes.io/component: app
         app.kubernetes.io/part-of: nautible
         app.kubernetes.io/managed-by: manual
       annotations:
         dapr.io/enabled: "true"
-        dapr.io/app-id: "nautible-app-payment-convenience"
+        dapr.io/app-id: "nautible-app-ms-payment-convenience"
         dapr.io/app-port: "8080"
         proxy.istio.io/config: '{ "holdApplicationUntilProxyStarts": true }' # https://github.com/dapr/dapr/issues/2657
     spec:
       containers:
-        - name: nautible-app-payment-convenience
-          image: public.ecr.aws/nautible/nautible-app-payment-convenience:0272ae89184fe088c3b9a9c15b6499feb856637b
+        - name: nautible-app-ms-payment-convenience
+          image: public.ecr.aws/nautible/nautible-app-ms-payment-convenience:0272ae89184fe088c3b9a9c15b6499feb856637b
           ports:
             - containerPort: 8080
             - containerPort: 9000

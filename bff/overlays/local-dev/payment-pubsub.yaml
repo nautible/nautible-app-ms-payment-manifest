@@ -16,3 +16,9 @@ spec:
   metadata:
   - name: region
     value: ap-northeast-1
+  - name: accessKey
+    value: test-key
+  - name: secretKey
+    value: test-secret
+  - name: endpoint
+    value: http://payment-bff-localstack:4566

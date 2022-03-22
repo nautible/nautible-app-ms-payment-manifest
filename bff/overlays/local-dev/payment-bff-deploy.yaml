@@ -2,25 +2,29 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nautible-app-payment-bff
-  namespace: nautible-app
+  name: nautible-app-ms-payment-bff
+  namespace: nautible-app-ms
 spec:
   replicas: 1
   template:
     spec:
+      initContainers:
+      - name: wait-payment-bff-localstack
+        image: busybox
+        command: ['sh', '-c', "until nslookup payment-bff-localstack.$(cat /var/run/secrets/kubernetes.io/serviceaccount/namespace).svc.cluster.local; do echo waiting for payment-bff-localstack; sleep 2; done"]
       containers:
-        - name: nautible-app-payment-bff
-          image: nautible-app-payment-bff
+        - name: nautible-app-ms-payment-bff
+          image: nautible-app-ms-payment-bff
           env:
           - name: QUARKUS_PROFILE
             value: local-dev
           #- name: JAVA_VERSION
           #  value: "11"
           # daprのsidecarの初期化時に必要なlocalstack(sns,sqs)が利用できるまでwait
-#          lifecycle:
-#            postStart:
-#              exec:
-#                command:
-#                  - sh
-#                  - -c
-#                  - "for i in `seq 1 60`; do curl http://payment-localstack:4566/health >/dev/null && break || true; sleep 5; done"
+          # lifecycle:
+          #   postStart:
+          #     exec:
+          #       command:
+          #         - sh
+          #         - -c
+          #         - "for i in `seq 1 60`; do curl http://payment-bff-localstack:4566/health >/dev/null && break || true; sleep 5; done"

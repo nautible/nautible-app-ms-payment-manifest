@@ -1,18 +1,18 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nautible-app-payment-convenience
-  namespace: nautible-app
+  name: nautible-app-ms-payment-convenience
+  namespace: nautible-app-ms
   labels:
-    app.kubernetes.io/name: nautible-app-payment-convenience
-    app.kubernetes.io/instance: nautible-app-payment-convenience
+    app.kubernetes.io/name: nautible-app-ms-payment-convenience
+    app.kubernetes.io/instance: nautible-app-ms-payment-convenience
     app.kubernetes.io/version: 1.0.0
     app.kubernetes.io/component: app
     app.kubernetes.io/part-of: nautible
     app.kubernetes.io/managed-by: manual
 spec:
   selector:
-    app.kubernetes.io/instance: nautible-app-payment-convenience
+    app.kubernetes.io/instance: nautible-app-ms-payment-convenience
     app.kubernetes.io/component: app
   ports:
     - name: rest
