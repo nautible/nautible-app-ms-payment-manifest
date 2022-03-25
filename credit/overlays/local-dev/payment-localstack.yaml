@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
         - name: payment-credit-localstack
-          image: localstack/localstack
+          image: localstack/localstack:0.14.1
           ports:
             - containerPort: 4566
           env:

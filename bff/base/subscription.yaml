@@ -2,6 +2,7 @@ apiVersion: dapr.io/v1alpha1
 kind: Subscription
 metadata:
   name: payment-create
+  namespace: nautible-app-ms
 spec:
   pubsubname: payment-pubsub
   topic: payment-create
@@ -14,6 +15,7 @@ apiVersion: dapr.io/v1alpha1
 kind: Subscription
 metadata:
   name: payment-reject-create
+  namespace: nautible-app-ms
 spec:
   pubsubname: payment-pubsub
   topic: payment-reject-create
