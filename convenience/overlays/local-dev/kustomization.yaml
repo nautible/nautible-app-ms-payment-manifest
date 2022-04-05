@@ -1,6 +1,0 @@
-bases:
-  - ../../base
-patchesStrategicMerge:
-  - payment-convenience-deploy.yaml
-resources:
-  - payment-localstack.yaml
