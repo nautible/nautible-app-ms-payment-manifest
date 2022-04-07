@@ -7,7 +7,7 @@ spec:
   template:
     spec:
       containers:
-        - name: nautible-app-ms-payment-bff
-          env:
-            - name: QUARKUS_DYNAMODB_AWS_REGION
-              value: ap-northeast-1
+      - name: nautible-app-ms-payment-bff
+        env:
+        - name: DYNAMODB_REGION
+          value: ap-northeast-1
