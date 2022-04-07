@@ -7,9 +7,9 @@ spec:
   pubsubname: payment-pubsub
   topic: payment-create
   route: /payment/create
-# scopes:
-# - ServiceB
-# - ServiceC
+scopes:
+- nautible-app-ms-payment-bff
+
 ---
 apiVersion: dapr.io/v1alpha1
 kind: Subscription
@@ -20,6 +20,5 @@ spec:
   pubsubname: payment-pubsub
   topic: payment-reject-create
   route: /payment/rejectCreate
-# scopes:
-# - ServiceB
-# - ServiceC
+scopes:
+- nautible-app-ms-payment-bff
