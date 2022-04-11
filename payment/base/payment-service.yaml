@@ -5,7 +5,7 @@ metadata:
   namespace: nautible-app-ms
   labels:
     app.kubernetes.io/name: nautible-app-ms-payment
-    app.kubernetes.io/instance: nautible-app-ms-payment-
+    app.kubernetes.io/instance: nautible-app-ms-payment
     app.kubernetes.io/version: 1.0.0
     app.kubernetes.io/component: app
     app.kubernetes.io/part-of: nautible
