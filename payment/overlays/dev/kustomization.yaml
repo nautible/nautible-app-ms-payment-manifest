@@ -1,6 +1,6 @@
 bases:
   - ../../base
 patchesStrategicMerge:
-  - payment-bff-deploy.yaml
+  - payment-deploy.yaml
 resources:
   - ./payment-dapr-pubsub.yaml

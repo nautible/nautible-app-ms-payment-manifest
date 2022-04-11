@@ -21,4 +21,4 @@ spec:
   - name: secretKey
     value: test-secret
   - name: endpoint
-    value: http://payment-bff-localstack:4566
+    value: http://payment-localstack:4566

@@ -8,7 +8,7 @@ spec:
   topic: payment-create
   route: /payment/create
 scopes:
-- nautible-app-ms-payment-bff
+- nautible-app-ms-payment
 
 ---
 apiVersion: dapr.io/v1alpha1
@@ -21,4 +21,4 @@ spec:
   topic: payment-reject-create
   route: /payment/rejectCreate
 scopes:
-- nautible-app-ms-payment-bff
+- nautible-app-ms-payment

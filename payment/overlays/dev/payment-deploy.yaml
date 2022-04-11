@@ -1,13 +1,13 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nautible-app-ms-payment-bff
+  name: nautible-app-ms-payment
   namespace: nautible-app-ms
 spec:
   template:
     spec:
       containers:
-      - name: nautible-app-ms-payment-bff
+      - name: nautible-app-ms-payment
         env:
         - name: DYNAMODB_REGION
           value: ap-northeast-1
