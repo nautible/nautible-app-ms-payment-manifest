@@ -40,12 +40,12 @@ spec:
           livenessProbe:
             httpGet:
               port: 8080
-              path: /payment
+              path: /helthz
             failureThreshold: 10
             periodSeconds: 30
           readinessProbe:
             httpGet:
               port: 8080
-              path: /payment
+              path: /helthz
             failureThreshold: 10
             periodSeconds: 30
