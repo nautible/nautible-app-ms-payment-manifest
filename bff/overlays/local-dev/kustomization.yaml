@@ -1,6 +1,0 @@
-bases:
-  - ../../base
-patchesStrategicMerge:
-  - payment-bff-deploy.yaml
-resources:
-  - payment-localstack.yaml

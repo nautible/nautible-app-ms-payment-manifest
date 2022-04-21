@@ -1,3 +1,0 @@
-resources:
-  - payment-bff-deploy.yaml
-  - payment-bff-service.yaml

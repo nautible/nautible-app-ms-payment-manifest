@@ -1,3 +1,0 @@
-resources:
-  - payment-convenience-deploy.yaml
-  - payment-convenience-service.yaml
