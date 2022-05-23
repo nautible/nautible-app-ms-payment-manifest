@@ -9,5 +9,5 @@ spec:
       containers:
       - name: nautible-app-ms-payment-credit
         env:
-      - name: DYNAMODB_REGION
-        value: ap-northeast-1
+        - name: DYNAMODB_REGION
+          value: ap-northeast-1
