@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nautible-app-ms-payment-credit
+  namespace: nautible-app-ms
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+      - name: nautible-app-ms-payment-credit
+        image: nautible-app-ms-payment-credit
+        env:
+        - name: DB_HOST
+          value: payment-mongodb
+        - name: DB_PORT
+          value: "27017"
+        - name: DB_USER
+          value: root
+        - name: DB_PW
+          value: password

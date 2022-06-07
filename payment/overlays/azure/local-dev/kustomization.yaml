@@ -1,0 +1,8 @@
+bases:
+  - ../../../base
+patchesStrategicMerge:
+  - payment-deploy.yaml
+resources:
+  - payment-mongodb.yaml
+  - payment-redis.yaml
+  - payment-pubsub.yaml

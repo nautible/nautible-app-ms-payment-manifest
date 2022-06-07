@@ -1,0 +1,20 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: payment-pubsub
+  namespace: nautible-app-ms
+  labels:
+    app.kubernetes.io/name: payment-pubsub
+    app.kubernetes.io/instance: payment-pubsub
+    app.kubernetes.io/version: 1.0.0
+    app.kubernetes.io/component: pubsub
+    app.kubernetes.io/part-of: nautible
+    app.kubernetes.io/managed-by: manual
+spec:
+  type: pubsub.redis
+  version: v1
+  metadata:
+  - name: redisHost
+    value: payment-redis:6379
+  - name: redisPassword
+    value: password

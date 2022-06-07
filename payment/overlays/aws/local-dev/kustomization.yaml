@@ -1,5 +1,5 @@
 bases:
-  - ../../base
+  - ../../../base
 patchesStrategicMerge:
   - payment-deploy.yaml
 resources:
