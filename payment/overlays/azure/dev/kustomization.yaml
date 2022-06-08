@@ -2,3 +2,5 @@ bases:
   - ../../../base
 patchesStrategicMerge:
   - payment-deploy.yaml
+resources:
+  - payment-dapr-pubsub.yaml
