@@ -12,10 +12,8 @@ spec:
       - name: nautible-app-ms-payment
         image: nautible-app-ms-payment
         env:
-        - name: DB_HOST
-          value: payment-mongodb
-        - name: DB_PORT
-          value: "27017"
+        - name: DB_CONNECTION_STRING
+          value: mongodb://${DB_USER}:${DB_PW}@payment-mongodb:27017/Payment?authSource=admin
         - name: DB_USER
           value: root
         - name: DB_PW
