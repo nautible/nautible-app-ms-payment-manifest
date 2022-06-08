@@ -8,6 +8,7 @@ spec:
     spec:
       containers:
       - name: nautible-app-ms-payment-credit
+      - image: nautibledevacr.azurecr.io/nautible-app-ms-credit:6de1047af77753b2905498a38045dd4b4f8382cc
         env:
         - name: DB_USER
           valueFrom:

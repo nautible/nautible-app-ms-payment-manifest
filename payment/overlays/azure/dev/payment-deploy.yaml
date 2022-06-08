@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
       - name: nautible-app-ms-payment
-        image: nautible-app-ms-payment
+        image: nautibledevacr.azurecr.io/nautible-app-ms-payment:6de1047af77753b2905498a38045dd4b4f8382cc
         env:
         - name: DB_HOST
           value: mongo.cosmos.azure.com
