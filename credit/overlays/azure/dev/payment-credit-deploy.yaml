@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
       - name: nautible-app-ms-payment-credit
-      - image: nautibledevacr.azurecr.io/nautible-app-ms-credit:latest
+      - image: nautibledevacr.azurecr.io/nautible-app-ms-credit:66fcdd16a36be023e3b5ac2beff7ecf4faa281f7
         env:
         - name: DB_CONNECTION_STRING
           value: mongodb://${DB_USER}:${DB_PW}@${DB_USER}.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@${DB_USER}@
