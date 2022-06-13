@@ -1,6 +1,4 @@
 bases:
-  - ../../base
+  - ../../../base
 patchesStrategicMerge:
   - payment-credit-deploy.yaml
-#resources:
-#  - payment-localstack.yaml
