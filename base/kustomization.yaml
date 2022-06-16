@@ -1,3 +1,5 @@
 resources:
+  - payment-deploy.yaml
+  - payment-service.yaml
   - payment-credit-deploy.yaml
   - payment-credit-service.yaml

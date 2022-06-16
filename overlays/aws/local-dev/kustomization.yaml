@@ -2,7 +2,7 @@ bases:
   - ../../../base
 patchesStrategicMerge:
   - payment-deploy.yaml
+  - payment-credit-deploy.yaml
 resources:
-  - payment-mongodb.yaml
-  - payment-redis.yaml
+  - payment-localstack.yaml
   - payment-pubsub.yaml
