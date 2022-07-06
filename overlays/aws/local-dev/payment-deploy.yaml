@@ -8,10 +8,6 @@ spec:
   replicas: 1
   template:
     spec:
-      initContainers:
-      - name: wait-payment-localstack
-        image: busybox
-        command: ['sh', '-c', "until nslookup payment-localstack.$(cat /var/run/secrets/kubernetes.io/serviceaccount/namespace).svc.cluster.local; do echo waiting for payment-localstack; sleep 2; done"]
       containers:
       - name: nautible-app-ms-payment
         image: nautible-app-ms-payment
