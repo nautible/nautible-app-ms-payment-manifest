@@ -1,7 +1,0 @@
-bases:
-  - ../../base
-patchesStrategicMerge:
-  - payment-deploy.yaml
-resources:
-  - payment-localstack.yaml
-  - payment-pubsub.yaml

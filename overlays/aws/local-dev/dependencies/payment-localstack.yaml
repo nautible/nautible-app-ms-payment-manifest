@@ -29,12 +29,12 @@ spec:
     spec:
       containers:
         - name: payment-localstack
-          image: localstack/localstack:0.14.1
+          image: localstack/localstack:0.14.4
           ports:
             - containerPort: 4566
           env:
             - name: SERVICES
-              value: dynamodb,sqs,sns
+              value: dynamodb,sqs,sns,sts
             - name: START_WEB
               value: "0"
           lifecycle:

@@ -2,19 +2,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nautible-app-ms-payment
+  name: nautible-app-ms-payment-credit
   namespace: nautible-app-ms
 spec:
   replicas: 1
   template:
     spec:
-      initContainers:
-      - name: wait-payment-localstack
-        image: busybox
-        command: ['sh', '-c', "until nslookup payment-localstack.$(cat /var/run/secrets/kubernetes.io/serviceaccount/namespace).svc.cluster.local; do echo waiting for payment-localstack; sleep 2; done"]
       containers:
-      - name: nautible-app-ms-payment
-        image: nautible-app-ms-payment
+      - name: nautible-app-ms-payment-credit
+        image: nautible-app-ms-payment-credit
         env:
         - name: DYNAMODB_REGION
           value: ap-northeast-1

@@ -1,4 +1,0 @@
-resources:
-  - payment-deploy.yaml
-  - payment-service.yaml
-  - subscription.yaml

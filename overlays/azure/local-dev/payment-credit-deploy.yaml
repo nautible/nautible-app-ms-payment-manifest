@@ -1,0 +1,21 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nautible-app-ms-payment-credit
+  namespace: nautible-app-ms
+spec:
+  replicas: 1
+  template:
+    spec:
+      initContainers:
+      containers:
+      - name: nautible-app-ms-payment-credit
+        image: nautible-app-ms-payment-credit
+        env:
+        - name: DB_CONNECTION_STRING
+          value: mongodb://${DB_USER}:${DB_PW}@payment-mongodb:27017/Payment?authSource=admin
+        - name: DB_USER
+          value: root
+        - name: DB_PW
+          value: password
