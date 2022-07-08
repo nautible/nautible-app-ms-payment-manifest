@@ -4,5 +4,4 @@ patchesStrategicMerge:
   - payment-deploy.yaml
   - payment-credit-deploy.yaml
 resources:
-  - payment-localstack.yaml
   - payment-pubsub.yaml

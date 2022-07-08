@@ -8,13 +8,6 @@ spec:
   replicas: 1
   template:
     spec:
-      initContainers:
-      - name: wait-redis
-        image: busybox
-        command: ['sh', '-c', "until nslookup payment-redis.$(cat /var/run/secrets/kubernetes.io/serviceaccount/namespace).svc.cluster.local; do echo waiting for payment; sleep 2; done"]
-      - name: wait-mongodb
-        image: busybox
-        command: ['sh', '-c', "until nslookup payment-mongodb.$(cat /var/run/secrets/kubernetes.io/serviceaccount/namespace).svc.cluster.local; do echo waiting for payment; sleep 2; done"]
       containers:
       - name: nautible-app-ms-payment
         image: nautible-app-ms-payment
