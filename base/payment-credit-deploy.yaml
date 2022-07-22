@@ -30,6 +30,7 @@ spec:
         dapr.io/app-id: "nautible-app-ms-payment-credit"
         dapr.io/app-port: "8080"
         proxy.istio.io/config: '{ "holdApplicationUntilProxyStarts": true }' # https://github.com/dapr/dapr/issues/2657
+        dapr.io/enable-api-logging: "true"
     spec:
       containers:
         - name: nautible-app-ms-payment-credit

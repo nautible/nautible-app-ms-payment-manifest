@@ -29,6 +29,7 @@ spec:
         dapr.io/enabled: "true"
         dapr.io/app-id: "nautible-app-ms-payment"
         dapr.io/app-port: "8080"
+        dapr.io/enable-api-logging: "true"
         proxy.istio.io/config: '{ "holdApplicationUntilProxyStarts": true }' # https://github.com/dapr/dapr/issues/2657
     spec:
       containers:
