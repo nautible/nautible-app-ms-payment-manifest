@@ -5,3 +5,4 @@ patchesStrategicMerge:
   - payment-credit-deploy.yaml
 resources:
   - payment-dapr-pubsub.yaml
+  - ./subscription.yaml
