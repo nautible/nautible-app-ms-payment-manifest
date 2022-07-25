@@ -1,4 +1,4 @@
-apiVersion: dapr.io/v1alpha1
+apiVersion: dapr.io/v2alpha1
 kind: Subscription
 metadata:
   name: payment-create
@@ -6,12 +6,13 @@ metadata:
 spec:
   pubsubname: payment-pubsub
   topic: payment-create
-  route: /payment/create
+  routes:
+    default: /payment/create
 scopes:
 - nautible-app-ms-payment
 
 ---
-apiVersion: dapr.io/v1alpha1
+apiVersion: dapr.io/v2alpha1
 kind: Subscription
 metadata:
   name: payment-reject-create
@@ -19,6 +20,7 @@ metadata:
 spec:
   pubsubname: payment-pubsub
   topic: payment-reject-create
-  route: /payment/rejectCreate
+  routes:
+    default: /payment/rejectCreate
 scopes:
 - nautible-app-ms-payment
