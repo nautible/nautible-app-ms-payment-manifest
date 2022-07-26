@@ -5,7 +5,7 @@ metadata:
   namespace: nautible-app-ms
 spec:
   pubsubname: payment-pubsub
-  topic: payment\-create # AWSのSNS/SQSのみ、Topic名にハイフンがある場合はエスケープする
+  topic: payment-create
   routes:
     default: /payment/create
 scopes:
@@ -19,7 +19,7 @@ metadata:
   namespace: nautible-app-ms
 spec:
   pubsubname: payment-pubsub
-  topic: payment\-reject\-create # AWSのSNS/SQSのみ、Topic名にハイフンがある場合はエスケープする
+  topic: payment-reject-create
   routes:
     default: /payment/rejectCreate
 scopes:
