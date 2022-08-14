@@ -12,6 +12,8 @@ spec:
       - name: nautible-app-ms-payment-credit
         image: nautible-app-ms-payment-credit
         env:
+        - name: LOG_ENV
+          value: Development
         - name: DYNAMODB_REGION
           value: ap-northeast-1
         - name: DYNAMODB_ENDPOINT
