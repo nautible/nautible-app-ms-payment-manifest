@@ -8,8 +8,12 @@ spec:
     spec:
       containers:
       - name: nautible-app-ms-payment-credit
-        image: nautibledevacr.azurecr.io/nautible-app-ms-credit:76199226dfd20c3c46f83fba1c152242203799f0
+        image: nautibledevacr.azurecr.io/nautible-app-ms-credit:3690f57fa3a37f7487b48f277d8ea46ecb1b5d9c
         env:
+        - name: LOG_LEVEL # DEBUG, INFO, WARN, ERROR, DPANIC, PANIC, FATAL
+          value: INFO
+        - name: LOG_FORMAT # json, console
+          value: json
         - name: DB_CONNECTION_STRING
           value: mongodb://${DB_USER}:${DB_PW}@${DB_USER}.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@${DB_USER}@
         - name: DB_USER
