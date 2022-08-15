@@ -12,6 +12,6 @@ spec:
         - name: LOG_LEVEL # DEBUG, INFO, WARN, ERROR, DPANIC, PANIC, FATAL
           value: INFO
         - name: LOG_FORMAT # json, console
-          value: console
+          value: json
         - name: DYNAMODB_REGION
           value: ap-northeast-1
