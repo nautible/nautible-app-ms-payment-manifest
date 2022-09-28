@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
       - name: nautible-app-ms-payment
-        image: nautibledevacr.azurecr.io/nautible-app-ms-payment:f8c58a5f4ae37c0788260dc98c7aa1341f46fa07
+        image: nautibledevacr.azurecr.io/nautible-app-ms-payment:27a1b0255770b4ec9b3255fd23f56636b140908d
         env:
         - name: LOG_LEVEL # DEBUG, INFO, WARN, ERROR, DPANIC, PANIC, FATAL
           value: INFO
