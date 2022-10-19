@@ -43,13 +43,13 @@ spec:
               command:
                 - sh
                 - -c
-                - "for i in `seq 1 60`; do mongo mongodb://root:password@localhost:27017/?authSource=admin --quiet && break || true; sleep 5; done \
-                   && mongo mongodb://root:password@localhost:27017/Payment?authSource=admin --eval 'db.getSiblingDB(\"Common\").createCollection(\"Sequence\");' \
-                   && mongo mongodb://root:password@localhost:27017/Payment?authSource=admin --eval 'db.getSiblingDB(\"Payment\").createCollection(\"Payment\");' \
-                   && mongo mongodb://root:password@localhost:27017/Payment?authSource=admin --eval 'db.getSiblingDB(\"Payment\").createCollection(\"PaymentAllocateHistory\");' \
-                   && mongo mongodb://root:password@localhost:27017/Payment?authSource=admin --eval 'db.getSiblingDB(\"Payment\").createCollection(\"CreditPayment\");' \
-                   && mongo mongodb://root:password@localhost:27017/Common?authSource=admin --eval 'db.Sequence.insertOne( { _id: \"Payment\", SequenceNumber: NumberInt(0) } );' \
-                   && mongo mongodb://root:password@localhost:27017/Common?authSource=admin --eval 'db.Sequence.insertOne( { _id: \"CreditPayment\", SequenceNumber: NumberInt(0) } );'"
+                - "for i in `seq 1 60`; do mongostat mongodb://root:password@localhost:27017/?authSource=admin -n 1 && break || true; sleep 5; done \
+                   && mongosh mongodb://root:password@localhost:27017/Common?authSource=admin --eval 'db.getSiblingDB(\"Common\").createCollection(\"Sequence\");' \
+                   && mongosh mongodb://root:password@localhost:27017/Payment?authSource=admin --eval 'db.getSiblingDB(\"Payment\").createCollection(\"Payment\");' \
+                   && mongosh mongodb://root:password@localhost:27017/Payment?authSource=admin --eval 'db.getSiblingDB(\"Payment\").createCollection(\"PaymentAllocateHistory\");' \
+                   && mongosh mongodb://root:password@localhost:27017/Payment?authSource=admin --eval 'db.getSiblingDB(\"Payment\").createCollection(\"CreditPayment\");' \
+                   && mongosh mongodb://root:password@localhost:27017/Common?authSource=admin --eval 'db.Sequence.insertOne( { _id: \"Payment\", SequenceNumber: NumberInt(0) } );' \
+                   && mongosh mongodb://root:password@localhost:27017/Common?authSource=admin --eval 'db.Sequence.insertOne( { _id: \"CreditPayment\", SequenceNumber: NumberInt(0) } );'"
       - name: payment-mongodb-express
         image: mongo-express
         ports:

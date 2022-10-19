@@ -13,6 +13,10 @@ spec:
       - name: nautible-app-ms-payment-credit
         image: nautible-app-ms-payment-credit
         env:
+        - name: LOG_LEVEL # DEBUG, INFO, WARN, ERROR, DPANIC, PANIC, FATAL
+          value: DEBUG
+        - name: LOG_FORMAT # json, console
+          value: console
         - name: DB_CONNECTION_STRING
           value: mongodb://${DB_USER}:${DB_PW}@payment-mongodb:27017/Payment?authSource=admin
         - name: DB_USER
