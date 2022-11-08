@@ -14,4 +14,4 @@ spec:
         - name: LOG_FORMAT # json, console
           value: json
         - name: DYNAMODB_REGION
-          value: ap-northeast-1
+          value: us-east-1
