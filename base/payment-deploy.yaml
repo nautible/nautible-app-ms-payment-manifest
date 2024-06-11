@@ -26,14 +26,14 @@ spec:
         app.kubernetes.io/part-of: nautible
         app.kubernetes.io/managed-by: manual
       annotations:
-        dapr.io/enabled: "true"
-        dapr.io/app-id: "nautible-app-ms-payment"
-        dapr.io/app-port: "8080"
+        dapr.io/enabled: 'true'
+        dapr.io/app-id: 'nautible-app-ms-payment'
+        dapr.io/app-port: '8080'
         proxy.istio.io/config: '{ "holdApplicationUntilProxyStarts": true }' # https://github.com/dapr/dapr/issues/2657
     spec:
       containers:
         - name: nautible-app-ms-payment
-          image: public.ecr.aws/nautible/nautible-app-ms-payment:7e57229288dd570d4b78e8b3f93cfe41a1553831
+          image: public.ecr.aws/nautible/nautible-app-ms-payment:b656b5345bc695abee0ebf4dc9f6a2270534c9e4
           ports:
             - containerPort: 8080
             - containerPort: 9000
