@@ -33,7 +33,7 @@ spec:
     spec:
       containers:
         - name: nautible-app-ms-payment-credit
-          image: public.ecr.aws/nautible/nautible-app-ms-payment-credit:40a1bc9e659ab92fa22cb0b8fb0ecac67b5226ad
+          image: public.ecr.aws/nautible/nautible-app-ms-payment-credit:88186c39422d5afcbbcb37a019354dcc139da1ad
           ports:
             - containerPort: 8080
             - containerPort: 9000
