@@ -49,3 +49,5 @@ spec:
               path: /healthz
             failureThreshold: 10
             periodSeconds: 30
+      serviceAccount: nautible-app-ms-sa
+      serviceAccountName: nautible-app-ms-sa
